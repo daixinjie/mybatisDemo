@@ -1,0 +1,21 @@
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 配置数据源相关的信息 -->
+	<environments default="demo">
+		<environment id="demo">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://192.168.0.200:3306/wd_test?useUnicode=true&amp;characterEncoding=UTF-8" />
+				<property name="username" value="root" />
+				<property name="password" value="qeemo1234" />
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 列出映射文件 -->
+	<mappers>
+		<mapper resource="com/techbirds/mybatis/dao/UserMapper.xml" />
+	</mappers>
+</configuration> 
+
